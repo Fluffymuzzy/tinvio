@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "gilroy";
+  src: url("./assets/fonts");
+}
+
+@layer base {
+  body {
+    @apply text-body1;
+  }
+  p {
+    @apply font-normal;
+  }
+  h1 {
+    @apply font-gilroy font-semibold text-title1;
+  }
+  h2 {
+    @apply font-gilroy font-semibold text-title2;
+  }
+  h3 {
+    @apply font-gilroy font-semibold text-title3;
+  }
+  h4 {
+    @apply font-gilroy font-semibold text-title4;
+  }
+  h5 {
+    @apply font-gilroy font-semibold text-title5;
+  }
+  sub {
+    @apply font-gilroy;
+  }
+}
+
+@layer utilities {
+  /* subtittles */
+  .sub_one {
+    @apply text-subtitle1 font-semibold;
+  }
+  .sub_two {
+    @apply text-subtitle2 font-semibold;
+  }
+  .description {
+    @apply text-description font-medium;
+  }
+  /* ==================== */
+  /* buttons */
+  .main {
+    @apply text-btn_main font-bold;
+  }
+  .header_tab {
+    @apply text-header_tabs font-medium;
+  }
+  .header_btn {
+    @apply text-header_btn font-bold;
+  }
+  /* ==================== */
+  .placeholder {
+    @apply text-placeholder;
+  }
+  .error {
+    @apply text-error;
+  }
+  .tab {
+    @apply text-tabs;
+  }
+}
