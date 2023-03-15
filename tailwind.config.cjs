@@ -43,7 +43,7 @@ module.exports = {
         subtitle2: ["20px", "29px"],
         description: ["14px", "24px"],
         btn_main: ["16px", "20px"],
-        header_tabs: ["16px", "20px"],
+        header_tabs: ["16px", "19px"],
         header_btn: ["14px", "17px"],
         // inter
         body1: ["18px", "14px"],
@@ -51,6 +51,16 @@ module.exports = {
         error: ["12px", "15px"],
         placeholder: ["14px", "17px"],
         tabs: ["16px", "17px"],
+        lang: ["16px", "27px"],
+        
+      },
+      screens: {
+        xs: "375px",
+        sm: "768px",
+        md: "1024px",
+        lg: "1280px",
+        xl: "1440px",
+        xxl: "1920px",
       },
     },
   },
