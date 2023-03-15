@@ -5,6 +5,7 @@ import uk from "@/assets/images/uk.svg";
 import id from "@/assets/images/id.svg";
 import vt from "@/assets/images/vt.svg";
 import th from "@/assets/images/th.svg";
+import Button from "../Button/Button";
 
 type Props = {};
 
@@ -71,7 +72,7 @@ const Header: React.FC = (props: Props) => {
             </div>
           </nav>
           <div className="hidden sm:flex">
-            <button>Get Started</button>
+            <Button/>
           </div>
         </div>
       </div>

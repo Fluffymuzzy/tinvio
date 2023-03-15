@@ -12,9 +12,9 @@ module.exports = {
         input: "#F3F4F5",
         bg_grey: "#F6F6F6",
         bg_black: "#363636",
-        btn_primary: "#FF474D",
         btn_second: "#FFFFFF",
         btn_text: "#212121",
+        primary_hover: "#ff474dcc",
       },
       backgroundImage: {
         "radial-gray15": "radial-gradient(circle, #DADADA 0%, #FAFAFA 100%);",
@@ -52,7 +52,6 @@ module.exports = {
         placeholder: ["14px", "17px"],
         tabs: ["16px", "17px"],
         lang: ["16px", "27px"],
-        
       },
       screens: {
         xs: "375px",

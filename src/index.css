@@ -57,7 +57,7 @@
     @apply font-gilroy text-header_tabs font-normal text-btn_text no-underline hover:text-primary focus:text-primary active:text-primary transition-colors duration-300 ease-in text-center;
   }
   .header_btn {
-    @apply text-header_btn font-bold;
+    @apply text-header_btn font-bold px-[10px] py-0 w-[130px] h-[40px] font-gilroy hover:bg-[#f6f6f6]  text-main bg-white text-center border-none rounded-[16px] cursor-pointer transition-colors duration-300 ease-in;
   }
   /* ==================== */
   .placeholder {
