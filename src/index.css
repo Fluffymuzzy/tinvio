@@ -6,10 +6,13 @@
   font-family: "gilroy";
   src: url("./assets/fonts");
 }
+* {
+  box-sizing: border-box;
+}
 
 @layer base {
   body {
-    @apply text-body1;
+    @apply font-inter text-body2 font-normal;
   }
   p {
     @apply font-normal;
@@ -51,7 +54,7 @@
     @apply text-btn_main font-bold;
   }
   .header_tab {
-    @apply text-header_tabs font-medium;
+    @apply font-gilroy text-header_tabs font-normal text-btn_text no-underline hover:text-primary focus:text-primary active:text-primary transition-colors duration-300 ease-in text-center;
   }
   .header_btn {
     @apply text-header_btn font-bold;
@@ -66,4 +69,15 @@
   .tab {
     @apply text-tabs;
   }
+
+  /* header */
+  .min-w-320 {
+    min-width: 320px;
+  }
+
+  .header_responsive {
+    @apply xxl:max-w-[1312px] xl:max-w-[1192px] lg:max-w-[1032px] lg:p-0 md:max-w-[1024px] md:px-10 min-w-320 max-w-full px-16 mx-auto relative;
+  }
+
+  /* ==================== */
 }
