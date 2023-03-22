@@ -1,0 +1,157 @@
+// @import url('https://fonts.cdnfonts.com/css/gilroy-bold');
+
+main {
+  display: block;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+img {
+  border-style: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --text-main: #212121;
+  --text-white: #fff;
+  --text-primary: #ff474d;
+  --text-primary-hover: #ff474dcc;
+  --text-second: #5c5c5c;
+  --text-placeholder: #bdbdbd;
+  --input-color: #f3f4f5;
+  --bg-black: #363636;
+  --bg-grey: #f6f6f6;
+  --bg-radial-15: radial-gradient(
+    95.51% 95.51% at 50% 50%,
+    #dadada26 0%,
+    #fafafa26 100%
+  );
+  --bg-radial-20: radial-gradient(
+    95.51% 95.51% at 50% 50%,
+    #ffffff99 0%,
+    #fafafa99 100%
+  );
+  --bg-radial-50: radial-gradient(
+    95.51% 95.51% at 50% 50%,
+    #f6f5f580 0%,
+    #fafafa80 100%
+  );
+  --bg-radial-60: radial-gradient(
+    95.51% 95.51% at 50% 50%,
+    #ffffff99 0%,
+    #fafafa99 100%
+  );
+  --diamond-bright: #fb242b;
+  --diamond-dim: #fb242b99;
+  --shadow-color: #2121211a;
+}
+
+@font-face {
+  font-family: Inter;
+  src: url("./assets/fonts/Inter-Regular.woff") format("woff"),
+    url("./assets/fonts/Inter-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("./assets/fonts/Gilroy-Medium.eot");
+  src: local("Gilroy Medium"), local("Gilroy-Medium"),
+    url("./assets/fonts/Gilroy-Medium.eot?#iefix") format("embedded-opentype"),
+    url("./assets/fonts/Gilroy-Medium.woff") format("woff"),
+    url("./assets/fonts/Gilroy-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("./assets/fonts/Gilroy-SemiBoldItalic.eot");
+  src: local("Gilroy SemiBold Italic"), local("Gilroy-SemiBoldItalic"),
+    url("./assets/fonts/Gilroy-SemiBoldItalic.eot?#iefix")
+      format("embedded-opentype"),
+    url("./assets/fonts/Gilroy-SemiBoldItalic.woff") format("woff"),
+    url("./assets/fonts/Gilroy-SemiBoldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("./assets/fonts/Gilroy-Bold.eot");
+  src: local("Gilroy Bold"), local("Gilroy-Bold"),
+    url("./assets/fonts/Gilroy-Bold.eot?#iefix") format("embedded-opentype"),
+    url("./assets/fonts/Gilroy-Bold.woff") format("woff"),
+    url("./assets/fonts/Gilroy-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+body,
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  position: relative;
+  background-color: #fff;
+}

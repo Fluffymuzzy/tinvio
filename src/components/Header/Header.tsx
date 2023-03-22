@@ -1,78 +1,203 @@
-import logo from "@/assets/images/logo.svg";
-import tinvio from "@/assets/images/tinvio.svg";
-import arrow from "@/assets/images/arrow.svg";
-import uk from "@/assets/images/uk.svg";
-import id from "@/assets/images/id.svg";
-import vt from "@/assets/images/vt.svg";
-import th from "@/assets/images/th.svg";
-import Button from "../Button/Button";
+import styles from "./Header.module.scss";
+import arrow from "../../assets/images/arrow.svg";
 
 type Props = {};
 
-const Header: React.FC = (props: Props) => {
+const Header: React.FC<Props> = () => {
   return (
-    <header className="w-full fixed top-0 left-0 py-6 h-auto">
-      <div className="header_responsive">
-        <div className="flex relative items-center justify-between">
-          <div className="flex">
-            <a href="/" className="cursor-pointer flex items-center">
-              <div className="relative w-[43.55px] h-[43.55px]">
-                <img src={logo} alt="logo" className="absolute top-[2px]" />
-              </div>
-              <div className="relative ml-[7.4px] w-[58px] h-[19px]">
-                <img src={tinvio} alt="logo" className="absolute top-[-1px]" />
-              </div>
-            </a>
-            <div className="flex items-center relative cursor-pointer ml-[24px] mt-[2px]">
-              <div className="mr-[4px] uppercase font-normal text-lang text-main">
-                EN
-              </div>
-              <div className="rotate-0">
-                <img src={arrow} alt="arrow" />
-              </div>
-              <div className="absolute hidden top-[33px] z-[5px] left-[-9px] h-[139px] w-[48px] rounded-[8px] p-[12px]">
-                <div className="mb-[8px] w-[24px] h-[24px] cursor-poiner">
-                  <span className="box-border inline-block overflow-hidden w-auto h-auto bg-none opacity-1 border-none m-0 p-0 relative max-w-full">
-                    <img src={uk} alt="uk" />
-                  </span>
+    <header className={styles.header}>
+      <div className=""></div>
+      <div className={styles.header__wrapper_container}>
+        <div className={styles.header__wrapper}>
+          <div className={styles.header__content}>
+            <div className={styles.header__logo_container}>
+              <div className={styles.header__logo_images}>
+                <div className={styles.header__main_logo}>
+                  <svg
+                    className={styles.header__logo_img}
+                    width="100%"
+                    height="100%"
+                    viewBox="0 0 54 48"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <mask
+                      id="mask0_1296_19484"
+                      style={{ maskType: "alpha" }}
+                      maskUnits="userSpaceOnUse"
+                      x="0"
+                      y="0"
+                      width="54"
+                      height="48"
+                    >
+                      <path
+                        d="M29.9423 21.0371H24.4869C24.4869 21.0371 23.7076 24.498 27.2146 24.498C30.7217 24.498 29.9423 21.0371 29.9423 21.0371Z"
+                        fill="#3E3E3E"
+                      ></path>
+                      <path
+                        d="M37.2178 24.2743C37.2178 24.2743 38.8619 31.344 44.6163 29.9353C49.0949 28.839 45.4384 19.4841 48.3156 16.4358C49.7911 14.8725 52.4259 15.5649 52.4259 15.5649"
+                        stroke="#212121"
+                        stroke-width="2.67568"
+                        stroke-linecap="round"
+                      ></path>
+                      <path
+                        d="M17.208 24.2743C17.208 24.2743 15.5639 31.344 9.80945 29.9353C5.33092 28.839 8.98739 19.4841 6.11017 16.4358C4.63463 14.8725 1.99986 15.5649 1.99986 15.5649"
+                        stroke="#3E3E3E"
+                        stroke-width="2.67568"
+                        stroke-linecap="round"
+                      ></path>
+                      <path
+                        d="M16.5507 17.5741C16.5507 17.5741 14.3686 1.99993 27.0259 2C39.6832 2.00007 37.9372 17.5741 37.9372 17.5741"
+                        stroke="#3E3E3E"
+                        stroke-width="2.67568"
+                        stroke-linecap="round"
+                      ></path>
+                      <path
+                        d="M36.6086 17.4092C36.5176 18.1425 37.0382 18.8107 37.7714 18.9018C38.5046 18.9928 39.1729 18.4722 39.2639 17.739L36.6086 17.4092ZM27.2129 3.33784C30.0782 3.33786 31.9985 4.20884 33.326 5.42132C34.6807 6.65862 35.5259 8.35155 36.0335 10.1504C36.5402 11.9459 36.6873 13.7662 36.7029 15.1557C36.7107 15.8461 36.686 16.4196 36.6597 16.8166C36.6466 17.0149 36.6332 17.1685 36.6233 17.2699C36.6184 17.3206 36.6144 17.3582 36.6118 17.3817C36.6105 17.3935 36.6095 17.4018 36.609 17.4064C36.6087 17.4087 36.6085 17.4101 36.6085 17.4106C36.6084 17.4108 36.6084 17.4108 36.6085 17.4106C36.6085 17.4105 36.6085 17.4102 36.6085 17.4101C36.6086 17.4097 36.6086 17.4092 37.9363 17.5741C39.2639 17.739 39.264 17.7384 39.2641 17.7378C39.2641 17.7375 39.2642 17.7368 39.2643 17.7362C39.2644 17.735 39.2646 17.7336 39.2648 17.7319C39.2652 17.7287 39.2657 17.7244 39.2663 17.7192C39.2675 17.7089 39.2691 17.6948 39.2711 17.6771C39.275 17.6417 39.2803 17.5919 39.2865 17.5285C39.2988 17.4018 39.3145 17.2208 39.3296 16.9932C39.3596 16.5385 39.3871 15.8953 39.3784 15.1256C39.3612 13.595 39.2007 11.5218 38.6086 9.42376C38.0176 7.32909 36.973 5.1285 35.1304 3.44565C33.2607 1.73798 30.6763 0.662179 27.2129 0.66216L27.2129 3.33784Z"
+                        fill="#212121"
+                      ></path>
+                      <path
+                        d="M27.2129 28.9658V46.0001"
+                        stroke="#3E3E3E"
+                        stroke-width="2.67568"
+                        stroke-linecap="round"
+                      ></path>
+                      <path
+                        d="M33.4704 26.6533C33.4704 26.6533 31.3211 41.3622 39.4885 41.3622C47.6559 41.3622 46.7961 33.7849 46.7961 33.7849"
+                        stroke="#212121"
+                        stroke-width="2.67568"
+                        stroke-linecap="round"
+                      ></path>
+                      <path
+                        d="M20.9553 26.6533C20.9553 26.6533 23.1047 41.3622 14.9373 41.3622C6.76992 41.3622 7.62965 33.7849 7.62965 33.7849"
+                        stroke="#3E3E3E"
+                        stroke-width="2.67568"
+                        stroke-linecap="round"
+                      ></path>
+                      <ellipse
+                        cx="32.4192"
+                        cy="18.8696"
+                        rx="1.60086"
+                        ry="1.73046"
+                        fill="#212121"
+                      ></ellipse>
+                      <ellipse
+                        cx="22.011"
+                        cy="18.8696"
+                        rx="1.60086"
+                        ry="1.73046"
+                        fill="#3E3E3E"
+                      ></ellipse>
+                    </mask>
+                    <g mask="url(#mask0_1296_19484)">
+                      <rect
+                        x="-1.23242"
+                        y="-2.19238"
+                        width="28.4747"
+                        height="52.4545"
+                        fill="#FF474D"
+                      ></rect>
+                      <rect
+                        x="27.2451"
+                        y="-2.19238"
+                        width="28.4747"
+                        height="52.4545"
+                        fill="#D61414"
+                      ></rect>
+                    </g>
+                  </svg>
                 </div>
-                <div className="mb-[8px] w-[24px] h-[24px] cursor-poiner">
-                  <span className="box-border inline-block overflow-hidden w-auto h-auto bg-none opacity-1 border-none m-0 p-0 relative max-w-full">
-                    <img src={id} alt="id" />
-                  </span>
+                <div className={styles.header__secondary_logo}>
+                  <svg
+                    className={styles.header__secondary_logo_img}
+                    width="100%"
+                    height="100%"
+                    viewBox="0 0 70 23"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.4227 6.7684V9.33181H5.61626V17.6019C5.61626 18.3546 5.74982 18.8937 6.01694 19.2193C6.30313 19.5244 6.73243 19.6872 7.30483 19.7075C7.87722 19.7075 8.58318 19.6872 9.4227 19.6465V22.0268C7.22851 22.332 5.6258 22.1387 4.61456 21.447C3.62241 20.7553 3.12633 19.4736 3.12633 17.6019V9.33181H0.292969V6.7684H3.12633V3.28948L5.61626 2.49604V6.7684H9.4227Z"
+                      fill="#3E3E3E"
+                    ></path>
+                    <path
+                      d="M13.6298 3.99137C13.1528 3.99137 12.7521 3.81844 12.4278 3.47258C12.1034 3.12672 11.9412 2.70966 11.9412 2.22139C11.9412 1.73312 12.1034 1.31606 12.4278 0.9702C12.7521 0.603999 13.1528 0.420898 13.6298 0.420898C14.0877 0.420898 14.4789 0.603999 14.8032 0.9702C15.1276 1.31606 15.2898 1.73312 15.2898 2.22139C15.2898 2.70966 15.1276 3.12672 14.8032 3.47258C14.4789 3.81844 14.0877 3.99137 13.6298 3.99137ZM14.8605 22.0268H12.3705V6.7684H14.8605V22.0268Z"
+                      fill="#3E3E3E"
+                    ></path>
+                    <path
+                      d="M25.7854 6.37168C27.4644 6.37168 28.8096 6.94132 29.8208 8.08062C30.832 9.19957 31.3377 10.7254 31.3377 12.6581V22.0268H28.8477V12.8107C28.8477 11.5901 28.5329 10.6339 27.9033 9.94214C27.2736 9.25043 26.4055 8.90457 25.2989 8.90457C24.0205 8.90457 23.0093 9.33181 22.2652 10.1863C21.5211 11.0204 21.149 12.2716 21.149 13.9398V22.0268H18.6591V6.7684H21.149V8.96561C22.1412 7.23632 23.6866 6.37168 25.7854 6.37168Z"
+                      fill="#3E3E3E"
+                    ></path>
+                    <path
+                      d="M40.1416 19.1887L44.6349 6.7684H47.3252L41.6012 22.0268H38.682L32.958 6.7684H35.6483L40.1416 19.1887Z"
+                      fill="#3E3E3E"
+                    ></path>
+                    <path
+                      d="M50.6903 3.99137C50.2133 3.99137 49.8126 3.81844 49.4882 3.47258C49.1639 3.12672 49.0017 2.70966 49.0017 2.22139C49.0017 1.73312 49.1639 1.31606 49.4882 0.9702C49.8126 0.603999 50.2133 0.420898 50.6903 0.420898C51.1482 0.420898 51.5393 0.603999 51.8637 0.9702C52.188 1.31606 52.3502 1.73312 52.3502 2.22139C52.3502 2.70966 52.188 3.12672 51.8637 3.47258C51.5393 3.81844 51.1482 3.99137 50.6903 3.99137ZM51.9209 22.0268H49.431V6.7684H51.9209V22.0268Z"
+                      fill="#3E3E3E"
+                    ></path>
+                    <path
+                      d="M67.7971 20.1042C66.347 21.6504 64.5631 22.4235 62.4452 22.4235C60.3273 22.4235 58.5434 21.6504 57.0933 20.1042C55.6432 18.5581 54.9182 16.6558 54.9182 14.3976C54.9182 12.1394 55.6432 10.2371 57.0933 8.69096C58.5434 7.14477 60.3273 6.37168 62.4452 6.37168C64.5631 6.37168 66.347 7.14477 67.7971 8.69096C69.2662 10.2575 70.0008 12.1597 70.0008 14.3976C70.0008 16.6355 69.2662 18.5377 67.7971 20.1042ZM62.4452 19.8296C63.8762 19.8296 65.0782 19.3108 66.0513 18.2732C67.0244 17.2357 67.5109 15.9438 67.5109 14.3976C67.5109 12.8514 67.0244 11.5595 66.0513 10.522C65.0782 9.48439 63.8762 8.96561 62.4452 8.96561C61.0333 8.96561 59.8408 9.48439 58.8677 10.522C57.8946 11.5595 57.4081 12.8514 57.4081 14.3976C57.4081 15.9438 57.8946 17.2357 58.8677 18.2732C59.8408 19.3108 61.0333 19.8296 62.4452 19.8296Z"
+                      fill="#3E3E3E"
+                    ></path>
+                    <path
+                      d="M40.1416 19.1887L44.6349 6.7684H47.3252L41.6012 22.0268H38.682L32.958 6.7684H35.6483L40.1416 19.1887Z"
+                      fill="#212121"
+                    ></path>
+                    <path
+                      d="M50.6903 3.99137C50.2133 3.99137 49.8126 3.81844 49.4882 3.47258C49.1639 3.12672 49.0017 2.70966 49.0017 2.22139C49.0017 1.73312 49.1639 1.31606 49.4882 0.970199C49.8126 0.603999 50.2133 0.420898 50.6903 0.420898C51.1482 0.420898 51.5393 0.603999 51.8637 0.970199C52.188 1.31606 52.3502 1.73312 52.3502 2.22139C52.3502 2.70966 52.188 3.12672 51.8637 3.47258C51.5393 3.81844 51.1482 3.99137 50.6903 3.99137ZM51.9209 22.0268H49.431V6.7684H51.9209V22.0268Z"
+                      fill="#212121"
+                    ></path>
+                    <path
+                      d="M67.7971 20.1042C66.347 21.6504 64.5631 22.4235 62.4452 22.4235C60.3273 22.4235 58.5434 21.6504 57.0933 20.1042C55.6432 18.5581 54.9182 16.6558 54.9182 14.3976C54.9182 12.1394 55.6432 10.2371 57.0933 8.69096C58.5434 7.14477 60.3273 6.37168 62.4452 6.37168C64.5631 6.37168 66.347 7.14477 67.7971 8.69096C69.2663 10.2575 70.0008 12.1597 70.0008 14.3976C70.0008 16.6355 69.2663 18.5377 67.7971 20.1042ZM62.4452 19.8296C63.8762 19.8296 65.0782 19.3108 66.0513 18.2732C67.0244 17.2357 67.5109 15.9438 67.5109 14.3976C67.5109 12.8514 67.0244 11.5595 66.0513 10.522C65.0782 9.48439 63.8762 8.96561 62.4452 8.96561C61.0333 8.96561 59.8408 9.48439 58.8677 10.522C57.8946 11.5595 57.4081 12.8514 57.4081 14.3976C57.4081 15.9438 57.8946 17.2357 58.8677 18.2732C59.8408 19.3108 61.0333 19.8296 62.4452 19.8296Z"
+                      fill="#212121"
+                    ></path>
+                    <ellipse
+                      cx="50.8219"
+                      cy="2.3282"
+                      rx="1.78874"
+                      ry="1.9073"
+                      fill="#D61414"
+                    ></ellipse>
+                    <ellipse
+                      cx="13.7106"
+                      cy="2.3282"
+                      rx="1.78874"
+                      ry="1.9073"
+                      fill="#FF474D"
+                    ></ellipse>
+                  </svg>
                 </div>
-                <div className="mb-[8px] w-[24px] h-[24px] cursor-poiner">
-                  <span className="box-border inline-block overflow-hidden w-auto h-auto bg-none opacity-1 border-none m-0 p-0 relative max-w-full">
-                    <img src={th} alt="th" />
-                  </span>
+              </div>
+              <div className={styles.header__language_container}>
+                <div className={styles.header__current_language}>en</div>
+                <div className={styles.header__arrow_wrapper}>
+                  <img src={arrow} alt="arrow" />
                 </div>
-                <div className="mb-[8px] w-[24px] h-[24px] cursor-poiner">
-                  <span className="box-border inline-block overflow-hidden w-auto h-auto bg-none opacity-1 border-none m-0 p-0 relative max-w-full">
-                    <img src={vt} alt="vt" />
-                  </span>
-                </div>
+                <div className={styles.header__menu_language}>MENU</div>
               </div>
             </div>
-          </div>
-          <nav className="hidden sm:flex items-center justify-start list-none m-0 p-0">
-            <div className="mr-[72px]">
-              <a href="/" className="header_tab">
-                Home
-              </a>
+            <ul className={styles.header_nav}>
+              <li className={styles.header__nav_li}>
+                <a href="/">Home</a>
+              </li>
+              <li className={styles.header__nav_li}>
+                <a href="/features">Features</a>
+              </li>
+              <li className={styles.header__nav_li}>
+                <a href="/company">Company</a>
+              </li>
+            </ul>
+            <div className={styles.header__button_container}>
+              <button type="button" className={styles.header__button}>
+                Get Started
+              </button>
             </div>
-            <div className="mr-[72px]">
-              <a href="/" className="header_tab">
-                Features
-              </a>
-            </div>
-            <div className="mr-0">
-              <a href="/" className="header_tab">
-                Company
-              </a>
-            </div>
-          </nav>
-          <div className="hidden sm:flex">
-            <Button/>
+            <button type="button" className={styles.header__hidden_button}>
+              <span className={styles.burger_span1}></span>
+              <span className={styles.burder_span2}></span>
+              <span className={styles.burder_span3}></span>
+            </button>
           </div>
         </div>
       </div>
