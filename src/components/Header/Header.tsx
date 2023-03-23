@@ -1,11 +1,37 @@
+import { useEffect, useState } from "react";
 import styles from "./Header.module.scss";
 import arrow from "../../assets/images/arrow.svg";
 
 type Props = {};
 
 const Header: React.FC<Props> = () => {
+  const [isScrolled, setIsScrolled] = useState<Boolean>(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset;
+      if (scrollTop > 0 && !isScrolled) {
+        setIsScrolled(true);
+      } else if (scrollTop === 0 && isScrolled) {
+        setIsScrolled(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [isScrolled]);
+
+  const header = isScrolled
+    ? `${styles.header} ${styles.scrolled}`
+    : styles.header;
+
+  const button = isScrolled
+    ? `${styles.header__button} ${styles.scrolled}`
+    : styles.header__button;
+
   return (
-    <header className={styles.header}>
+    <header className={header}>
       <div className=""></div>
       <div className={styles.header__wrapper_container}>
         <div className={styles.header__wrapper}>
@@ -189,7 +215,7 @@ const Header: React.FC<Props> = () => {
               </li>
             </ul>
             <div className={styles.header__button_container}>
-              <button type="button" className={styles.header__button}>
+              <button type="button" className={button}>
                 Get Started
               </button>
             </div>

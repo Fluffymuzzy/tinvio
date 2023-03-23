@@ -8,6 +8,17 @@
   z-index: 999;
   background-color: rgba(255, 255, 255, 0);
   backdrop-filter: none;
+  &.scrolled {
+    height: auto;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    padding: 24px 0px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(24px);
+  }
 
   &__wrapper_container {
     min-width: 320px;
@@ -193,6 +204,16 @@
     transition: all 0.3s ease 0s;
     &:hover {
       background-color: rgb(224, 224, 225);
+    }
+    &.scrolled {
+      color: var(--text-white);
+      background-color: var(--text-primary);
+      &:hover {
+        background-color: var(--text-primary-hover);
+      }
+      &:active {
+        background-color: var(--text-primary-hover);
+      }
     }
   }
 
