@@ -119,14 +119,13 @@ h5 {
 
 @font-face {
   font-family: "Gilroy";
-  src: url("./assets/fonts/Gilroy-SemiBoldItalic.eot");
-  src: local("Gilroy SemiBold Italic"), local("Gilroy-SemiBoldItalic"),
-    url("./assets/fonts/Gilroy-SemiBoldItalic.eot?#iefix")
-      format("embedded-opentype"),
-    url("./assets/fonts/Gilroy-SemiBoldItalic.woff") format("woff"),
-    url("./assets/fonts/Gilroy-SemiBoldItalic.ttf") format("truetype");
+  src: url("./assets/fonts/Gilroy-SemiBold.eot");
+  src: local("Gilroy SemiBold"), local("Gilroy-SemiBold"),
+    url("./assets/fonts/Gilroy-SemiBold.eot?#iefix") format("embedded-opentype"),
+    url("./assets/fonts/Gilroy-SemiBold.woff") format("woff"),
+    url("./assets/fonts/Gilroy-SemiBold.ttf") format("truetype");
   font-weight: 600;
-  font-style: italic;
+  font-style: normal;
 }
 
 @font-face {
