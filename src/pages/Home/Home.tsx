@@ -1,5 +1,6 @@
 import Header from "../../components/Header/Header";
 import MainContent from "../../components/MainContent/MainContent";
+import HowItWorks from "../../components/HowItWorks/HowItWorks";
 import styles from "./Home.module.scss";
 import grey_dots from "../../assets/images/dots-under-text.png";
 import dekstop from "../../assets/images/app.svg";
@@ -34,8 +35,9 @@ const Home = (props: Props) => {
       <div className={styles.home__grey1_square}></div>
       <main className={styles.home__main}>
         <Header />
-        <section>
+        <section className={styles.section}>
           <MainContent />
+          <HowItWorks />
         </section>
       </main>
     </div>
