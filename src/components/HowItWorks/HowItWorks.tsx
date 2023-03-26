@@ -10,12 +10,15 @@ import stars4 from "../../assets/images/stars4.svg";
 import red_arrow1 from "../../assets/images/red_arrow1.svg";
 import red_arrow2 from "../../assets/images/red_arrow2.svg";
 import lbdots from "../../assets/images/left_bot_dots.png";
+import play from "../../assets/images/Play.svg";
+
 type Props = {};
 
 const HowItWorks = (props: Props) => {
   const container = `${styles.works__container} ${styles.works__container_top}`;
   const midBox = `${styles.works__card_mid_box} ${styles.works__card_mid_box_transition}`;
   const botBox = ``;
+  const playBtn = `${styles.works__info_btn} ${styles._play_btn}`;
   return (
     <section className={styles.works}>
       <div className={container}>
@@ -130,11 +133,26 @@ const HowItWorks = (props: Props) => {
               </div>
             </div>
           </div>
-          <div className={styles.works__text_infos}>
-            <h3 className={styles.works__info_title}></h3>
-            <p className={styles.works__info_text}></p>
-            <button className={styles.works__info_btn}></button>
-            <div className={styles.works__info_dots}></div>
+          <div className={styles.works__text_info}>
+            <h3 className={styles.works__info_title}>Tinvio in a heartbeat</h3>
+            <p className={styles.works__info_text}>
+              Exchange messages, create or confirm orders, send invoices, and
+              collect payments across your supply chain -- all within one
+              dashboard.
+            </p>
+            <button className={playBtn}>
+              <span>
+                <img src={play} alt="play" />
+              </span>
+              <p>Play Video</p>
+            </button>
+            <div className={styles.works__info_dots}>
+              <div>
+                <span>
+                  <img src={lbdots} alt="dots" />
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
