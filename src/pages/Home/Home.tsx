@@ -1,6 +1,7 @@
 import Header from "../../components/Header/Header";
 import MainContent from "../../components/MainContent/MainContent";
 import HowItWorks from "../../components/HowItWorks/HowItWorks";
+import MoreMoney from "../../components/MoreMoney/MoreMoney";
 import styles from "./Home.module.scss";
 import grey_dots from "../../assets/images/dots-under-text.png";
 import dekstop from "../../assets/images/app.svg";
@@ -38,6 +39,7 @@ const Home = (props: Props) => {
         <section className={styles.section}>
           <MainContent />
           <HowItWorks />
+          <MoreMoney />
         </section>
       </main>
     </div>
