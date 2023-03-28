@@ -53,9 +53,9 @@ const MoreMoney: React.FC<Props> = () => {
     imagePairs[currentIndex].left3;
 
   const rightImageObj =
-    imagePairs[currentIndex].left1 ||
-    imagePairs[currentIndex].left2 ||
-    imagePairs[currentIndex].left3;
+    imagePairs[currentIndex].right1 ||
+    imagePairs[currentIndex].right2 ||
+    imagePairs[currentIndex].right3;
 
   const leftImageSrc = leftImageObj
     ? Object.values(leftImageObj)[0]
@@ -85,7 +85,9 @@ const MoreMoney: React.FC<Props> = () => {
           </h3>
           <div className={style.more__money_buttons}>
             <a
-              className={style.more__money_buttons_chats}
+              className={`${style.more__money_buttons_orders} ${
+                currentIndex === 0 ? style.active : ""
+              }`}
               onClick={() => {
                 handleClick(0);
               }}
@@ -93,7 +95,9 @@ const MoreMoney: React.FC<Props> = () => {
               Chats
             </a>
             <a
-              className={style.more__money_buttons_orders}
+              className={`${style.more__money_buttons_orders} ${
+                currentIndex === 1 ? style.active : ""
+              }`}
               onClick={() => {
                 handleClick(1);
               }}
@@ -101,7 +105,9 @@ const MoreMoney: React.FC<Props> = () => {
               Orders
             </a>
             <a
-              className={style.more__money_buttons_payments}
+              className={`${style.more__money_buttons_payments} ${
+                currentIndex === 2 ? style.active : ""
+              }`}
               onClick={() => {
                 handleClick(2);
               }}
