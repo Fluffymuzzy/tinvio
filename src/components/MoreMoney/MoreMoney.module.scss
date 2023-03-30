@@ -118,10 +118,41 @@
     color: rgb(255, 71, 77);
     margin: 0px;
     padding: 0px;
-    position: relative;
     white-space: nowrap;
     width: max-content;
+    position: relative;
+    &.animation {
+      -webkit-animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53)
+        both;
+      animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+    }
+
+    @-webkit-keyframes text-focus-in {
+      0% {
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+      }
+      100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+      }
+    }
+    @keyframes text-focus-in {
+      0% {
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+      }
+      100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+      }
+    }
   }
+
   &_buttons {
     display: flex;
     -webkit-box-pack: justify;
@@ -201,7 +232,6 @@
       background: rgb(243, 244, 245);
       border-radius: 8px;
       cursor: pointer;
-      //   border: 1px solid rgb(33, 33, 33);
       display: flex;
       -webkit-box-align: center;
       align-items: center;
@@ -535,6 +565,43 @@
     height: 488px;
     transition: opacity 0.4s ease-in 0s;
     opacity: 1;
+    @media (max-width: 1023px) {
+      right: 39%;
+      left: auto;
+      top: -95px;
+      width: 330px;
+      height: 536px;
+    }
+    &.animation {
+      -webkit-animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53)
+        both;
+      animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+    }
+
+    @-webkit-keyframes text-focus-in {
+      0% {
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+      }
+      100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+      }
+    }
+    @keyframes text-focus-in {
+      0% {
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+      }
+      100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+      }
+    }
   }
   &_img_inner {
     width: 100%;
@@ -586,6 +653,42 @@
     height: 488px;
     transition: opacity 0.4s ease-in 0.2s;
     opacity: 1;
+    @media (max-width: 1023px) {
+      top: 0px;
+      left: 47%;
+      width: 330px;
+      height: 536px;
+    }
+    &.animation {
+      -webkit-animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53)
+        both;
+      animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+    }
+
+    @-webkit-keyframes text-focus-in {
+      0% {
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+      }
+      100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+      }
+    }
+    @keyframes text-focus-in {
+      0% {
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+      }
+      100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+      }
+    }
   }
   &_img_inner {
     width: 100%;
@@ -593,6 +696,37 @@
     position: relative;
     & span {
       & img {
+      }
+    }
+  }
+  &_stars {
+    position: absolute;
+    left: -250px;
+    top: -107px;
+    @media (min-width: 1024px) {
+      position: absolute;
+      left: -251px px;
+      top: -57px;
+    }
+    & span {
+      & img {
+      }
+    }
+  }
+  &_dots {
+    position: absolute;
+    left: 133px;
+    top: -78px;
+
+    @media (min-width: 768px) {
+      position: absolute;
+      left: 133px;
+      top: -78px;
+    }
+    & span {
+      & img {
+        width: 267px;
+        height: 206.16px;
       }
     }
   }

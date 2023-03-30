@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import style from "./MoreMoney.module.scss";
 import left_img1 from "../../assets/images/chat-left1.png";
 import left_img2 from "../../assets/images/order-left2.png";
@@ -6,11 +6,14 @@ import left_img3 from "../../assets/images/pay-left3.png";
 import right_img1 from "../../assets/images/chat-right1.png";
 import right_img2 from "../../assets/images/order-right2.png";
 import right_img3 from "../../assets/images/pay-right3.png";
+import stars_mm from "../../assets/images/stars_mm.svg";
+import dots from "../../assets/images/dots_mm.png";
 
 type Props = {};
 
 const MoreMoney: React.FC<Props> = () => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const [showAnimation, setShowAnimation] = useState<Boolean>(false);
 
   const textTitleOptions = ["More Buddy", "More Speedy", "More Money"];
 
@@ -67,7 +70,15 @@ const MoreMoney: React.FC<Props> = () => {
 
   const handleClick = (index: number) => {
     setCurrentIndex(index);
+    setShowAnimation(true);
   };
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setShowAnimation(false);
+    }, 1000);
+    return () => clearTimeout(timeout);
+  }, [showAnimation]);
 
   const title = `${style.more__money_title} ${style.more__money_title_indent}`;
 
@@ -78,14 +89,18 @@ const MoreMoney: React.FC<Props> = () => {
           <h3 className={title}>
             <span>Smarter supply chain transactions.</span>
             <div className={style.more__money_title_wrap}>
-              <span className={style.more__money_title_span}>
+              <span
+                className={`${style.more__money_title_span} ${
+                  showAnimation ? style.animation : ""
+                }`}
+              >
                 {textTitleOptions[currentIndex]}
               </span>
             </div>
           </h3>
           <div className={style.more__money_buttons}>
             <a
-              className={`${style.more__money_buttons_orders} ${
+              className={`${style.more__money_buttons_chats} ${
                 currentIndex === 0 ? style.active : ""
               }`}
               onClick={() => {
@@ -135,50 +150,38 @@ const MoreMoney: React.FC<Props> = () => {
       <div className={style.more__money_red_square}>
         <div className={style.more__money_red_square_sm}>
           <div className={style.more__money_square_content}>
-            <div className={style.more__money_left_img}>
+            <div
+              className={`${style.more__money_left_img} ${
+                showAnimation ? style.animation : ""
+              }`}
+            >
               <div className={style.more__money_img_inner}>
                 <span>
                   <img src={leftImageSrc} alt="" />
                 </span>
               </div>
             </div>
-            <div className={style.more__money_right_img}>
+            <div
+              className={`${style.more__money_right_img} ${
+                showAnimation ? style.animation : ""
+              }`}
+            >
               <div className={style.more__money_img_inner}>
                 <span>
                   <img src={rightImageSrc} alt="" />
                 </span>
               </div>
             </div>
-            {/* <div className={style.more__money_left_img}>
-              <div className={style.more__money_img_inner}>
-                <span>
-                  <img src="" alt="" />
-                </span>
-              </div>
+            <div className={style.more__money_stars}>
+              <span>
+                <img src={stars_mm} alt="stars" />
+              </span>
             </div>
-            <div className={style.more__money_right_img}>
-              <div className={style.more__money_img_inner}>
-                <span>
-                  <img src="" alt="" />
-                </span>
-              </div>
+            <div className={style.more__money_dots}>
+              <span>
+                <img src={dots} alt="dots" />
+              </span>
             </div>
-            <div className={style.more__money_left_img}>
-              <div className={style.more__money_img_inner}>
-                <span>
-                  <img src="" alt="" />
-                </span>
-              </div>
-            </div>
-            <div className={style.more__money_right_img}>
-              <div className={style.more__money_img_inner}>
-                <span>
-                  <img src="" alt="" />
-                </span>
-              </div>
-            </div> */}
-            <div className={style.more__money_stars}></div>
-            <div className={style.more__money_dots}></div>
           </div>
         </div>
       </div>
