@@ -12,11 +12,16 @@ const Featured: React.FC<Props> = () => {
   const featuredTitleRef = useRef<HTMLHeadingElement>(null);
   const featuredCompaniesRef = useRef<HTMLDivElement>(null);
   const [scrollPosition, setScrollPosition] = useState(0);
+  const [showAnimation, setShowAnimation] = useState<Boolean>(false);
 
   useEffect(() => {
-    function handleScroll() {
+    setShowAnimation(true);
+  }, [showAnimation]);
+
+  useEffect(() => {
+    const handleScroll = () => {
       setScrollPosition(window.pageYOffset);
-    }
+    };
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -30,13 +35,15 @@ const Featured: React.FC<Props> = () => {
     if (titleElement && companiesElement) {
       const titleRect = titleElement.getBoundingClientRect();
       const companiesRect = companiesElement.getBoundingClientRect();
-      const threshold = window.innerHeight * 0.8;
+      const threshold = window.innerHeight * 1;
 
       const titleDistance = Math.max(0, threshold - titleRect.top);
       const companiesDistance = Math.max(0, threshold - companiesRect.top);
 
-      const titleTranslation = `translate3d(${-titleDistance}px, 0px, 0px)`;
-      const companiesTranslation = `translate3d(${companiesDistance}px, 0px, 0px)`;
+      const titleTranslation = `translate3d(${-titleDistance / 5}px, 0px, 0px)`;
+      const companiesTranslation = `translate3d(${
+        companiesDistance / 8
+      }px, 0px, 0px)`;
 
       titleElement.style.transform = titleTranslation;
       companiesElement.style.transform = companiesTranslation;
